@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
@@ -9,14 +10,101 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <style>
+        /* Layout */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Questrial', sans-serif;
+            margin: 0;
+        }
+
+        #container {
+            padding-left: 200px;
+            padding-right: 190px;
+        }
+
+        #container .column {
+            position: relative;
+            float: left;
+        }
+
+        #center {
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        #left {
+            width: 180px;
+            padding: 0 10px;
+            right: 240px;
+            margin-left: -100%;
+        }
+
+        #right {
+            width: 130px;
+            padding: 0 10px;
+            margin-right: -100%;
+        }
+
+        #footer {
+            clear: both;
+        }
+
+        /* IE hack */
+        * html #left {
+            left: 150px;
+        }
+
+        /* Make the columns the same height as each other */
+        #container {
+            overflow: hidden;
+        }
+
+        #container .column {
+            padding-bottom: 1001em;
+            margin-bottom: -1000em;
+        }
+
+        /* Fix for the footer */
+        * html body {
+            overflow: hidden;
+        }
+
+        * html #footer-wrapper {
+            float: left;
+            position: relative;
+            width: 100%;
+            padding-bottom: 10010px;
+            margin-bottom: -10000px;
+            background: #fff;
+        }
+
+        /* Aesthetics */
+
+        p {
+            color: #555;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
-<header id="topheader">
+<header>
+    <div class="message_header">
     <marquee behavior="scroll" direction="left" class = "center">
         LASH NOW > Pay Later with Klarna & Afterpay
         <span style="margin-left:100px">FREE Shipping | U.S. Orders $150+ (Exclusions may apply)</span>
         <span style="margin-left:100px">FREE Samples with Every Purchase</span>
     </marquee>
+    </div>
 
 
 <div class="navbar">
@@ -89,16 +177,138 @@
 <div>
 <img class = "center-image" src="img/LBLA-logo-r-2_410x.avif" alt="Logo" style="width:140px">
 </div>
-    <div class="dropdown">
-        <button class="dropbtn">Holiday Gift Giude
+
+    <div class="dropdown" style="margin-left: 110px">
+        <button class="dropbtn-nav-menu">Holiday Gift Giude
             <i class="small_arrow down"></i>
         </button>
         <div class="dropdown-content">
         </div>
     </div>
+
+    <div class="dropdown">
+        <button class="dropbtn-nav-menu">Lashes
+            <i class="small_arrow down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn-nav-menu">Adhesives
+            <i class="small_arrow down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn-nav-menu">Tweezers
+            <i class="small_arrow down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn-nav-menu">Accessories
+            <i class="small_arrow down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn-nav-menu">Aftercare
+            <i class="small_arrow down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn-nav-menu">Be Naked
+            <i class="small_arrow down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropbtn-nav-menu">Retail & Kits
+            <i class="small_arrow down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn-nav-menu">Lash Lift
+            <i class="small_arrow down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn-nav-menu">Beauty Products
+            <i class="small_arrow down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn-nav-menu">Training
+        </button>
+    </div>
+
 </header>
+
+
+
+<div class="slideshow-container center">
+
+    <div class="mySlides fade">
+        <img src="img/banner-desktop/lbla-gg-banner-desktop.jpg" style="width:83%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="img/banner-desktop/Awards_DesktopBanner-202212_3000x3000.webp" style="width:83%">
+    </div>
+
+</div>
+<br>
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+<h3 class="center">BEST SELLERS<br></h3>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+</script>
 
 
 </body>
 </html>
-

@@ -1,6 +1,11 @@
 /* Layout */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Questrial', sans-serif;
+    margin: 0;
 }
 
 #container {
@@ -90,10 +95,11 @@ nav ul a {
     margin-right: auto;
     width: 50%;
 }
-#topheader {
+
+.message_header{
     font-size: 16px;
-    padding: 0.3em;
-    height: 35px;
+    padding: 9px 16px;
+    height: 44px;
     background: #e6cdd1;
 }
 
