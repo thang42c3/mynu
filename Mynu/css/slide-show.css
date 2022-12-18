@@ -5,7 +5,8 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1250px;
+  height: 720px;
   position: relative;
   margin: auto;
 }

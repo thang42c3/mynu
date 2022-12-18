@@ -94,6 +94,58 @@
             margin: 0;
             padding: 0;
         }
+
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 60%;
+            width: auto;
+            margin-top: -15px;
+            padding: 22px;
+            color: black;
+            font-weight: bold;
+            font-size: 23px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
+            background: white;
+            display: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 150px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 150px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .column-5 {
+            float: left;
+            width: 20%;
+        }
+
+        .column-4 {
+            float: left;
+            width: 25%;
+        }
+
+        .column-3 {
+            float: left;
+            width: 33.33%;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
     </style>
 </head>
 <body>
@@ -141,7 +193,7 @@
     </a>
 
     <a href="#">
-        <span class="material-symbols-outlined"  style="scale: 80%">info</span>
+        <span class="material-symbols-outlined"  style="scale: 80%; padding: 0; margin: 0">info</span>
         <span class="text_icon" style="display: inline">Help Center</span>
     </a>
 
@@ -151,7 +203,7 @@
     </a>
 
     <a href="#">
-        <span class="material-symbols-outlined"  style="margin-left: 130px; scale: 80%">shopping_bag</span>
+        <span class="material-symbols-outlined"  style="float: left; scale: 80%; margin-left: 10px">shopping_bag</span>
         <span class="text_icon" style="display: inline">0</span>
     </a>
 
@@ -174,11 +226,12 @@
     </a>
     -->
 </div>
+
 <div>
 <img class = "center-image" src="img/LBLA-logo-r-2_410x.avif" alt="Logo" style="width:140px">
 </div>
-
-    <div class="dropdown" style="margin-left: 110px">
+    <div style="margin-left: 150px">
+    <div class="dropdown">
         <button class="dropbtn-nav-menu">Holiday Gift Giude
             <i class="small_arrow down"></i>
         </button>
@@ -263,33 +316,227 @@
         <button class="dropbtn-nav-menu">Training
         </button>
     </div>
-
+    </div>
 </header>
 
+    <div style="margin: 0 160px">
 
+    <div class="slideshow-container center" onmouseenter="displayCursorSlide()" onmouseleave="hideCursorSlide()">
+        <div class="mySlides fade">
+            <img src="img/banner-desktop/lbla-gg-banner-desktop.jpg" style="max-width:1200px;max-height:720px;">
+        </div>
 
-<div class="slideshow-container center">
+        <div class="mySlides fade">
+            <img src="img/banner-desktop/Awards_DesktopBanner-202212_3000x3000.webp" style="max-width:1200px;max-height:720px;">
+        </div>
 
-    <div class="mySlides fade">
-        <img src="img/banner-desktop/lbla-gg-banner-desktop.jpg" style="width:83%">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <div class="mySlides fade">
-        <img src="img/banner-desktop/Awards_DesktopBanner-202212_3000x3000.webp" style="width:83%">
+
+
+<p class="center" style="font-family: serif; font-size: 20px">BEST SELLERS<br></p>
+
+<div class="row">
+    <div class="column-5">
+            <img src="./img/Best-seller/1-Cashmere-favoriteoweb_1024x1024.webp" style="max-width: 270px; max-height: 220px;">
+            <p class="center" style="font-size: 14px">FAVORITE - Cashmere FauxMink Mega Volume Lashes 0.03mm</p>
+            <p class="center" style="font-size: 13px">$17.90</p>
     </div>
-
+    <div class="column-5">
+            <img src="./img/Best-seller/2020-Duo-Kit_-Superhero_Omega_1024x1024.webp" style="max-width: 270px; max-height: 220px;">
+            <p class="center" style="font-size: 14px">Duo Adhesive Kit (Superhero and Omega 5ml) - Lash Extension Adhesive / Lash Glue</p>
+            <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
+    <div class="column-5">
+            <img src="./img/Best-seller/LashboxWeb7498_RT_HRbig_c7310c36-726c-44fd-8491-a7a7bac6a922_1024x1024.webp" style="max-width: 270px; max-height: 220px;">
+            <p class="center" style="font-size: 14px">Satin Gold M Wide Tweezer</p>
+            <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
+    <div class="column-5">
+            <img src="./img/Best-seller/LashboxWeb7503_RT_HR_1024x1024.webp" style="max-width: 270px; max-height: 220px;">
+            <p class="center" style="font-size: 14px">LBLA Bond - Lash curing solution</p>
+            <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
+    <div class="column-5">
+            <img src="./img/Best-seller/Master-Collection-Tweezers_-M-WIDE-Web_1024x1024.webp" style="max-width: 270px; max-height: 220px;">
+            <p class="center" style="font-size: 14px">Long Wear Pre-Treatment & Primer</p>
+            <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
 </div>
-<br>
-<div style="text-align:center">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+
+        <div>
+            <img src="./img/Gift/lbla-Desktop-Ornaments-Banners-2000px-x-800px.jpeg" style="max-width:1200px;max-height:720px;">
+        </div>
+
+
+        <p class="center" style="font-family: serif; font-size: 20px">SHOP OUR HOLIDAY COLLECTION<br></p>
+
+<div class="row center">
+    <div class="column-4">
+        <img src="./img/shop-our-holiday/Holiday-Lash-Care-Kit--2022-Cosmetics-Website-Master_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+        <p class="center" style="font-size: 14px">FAVORITE - Cashmere FauxMink Mega Volume Lashes 0.03mm</p>
+        <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
+    <div class="column-4">
+        <img src="./img/shop-our-holiday/Holiday-Ornaments-2022--Bubbles-Please-Brown-Blk-Website-Master_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+        <p class="center" style="font-size: 14px">Duo Adhesive Kit (Superhero and Omega 5ml) - Lash Extension Adhesive / Lash Glue</p>
+        <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
+    <div class="column-4">
+        <img src="./img/shop-our-holiday/Holiday-Ornaments-2022--Lash-Ornament-Website-Master_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+        <p class="center" style="font-size: 14px">Satin Gold M Wide Tweezer</p>
+        <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
+    <div class="column-4">
+        <img src="./img/shop-our-holiday/Holiday-Ornaments-2022-Crush-to-Blush-Website-Master_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+        <p class="center" style="font-size: 14px">LBLA Bond - Lash curing solution</p>
+        <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
 </div>
 
-<h3 class="center">BEST SELLERS<br></h3>
+<div class="row center" style="background-color: #98f4e4">
+    <div class="column-4">
+        <img src="./img/buy-now/30day-tra-1.png" style="max-width: 270px; max-height: 250px;">
+    </div>
+    <div class="column-4">
+        <img src="./img/buy-now/buynow-tra-1.png" style="max-width: 270px; max-height: 250px;">
+    </div>
+    <div class="column-4">
+        <img src="./img/buy-now/service-tra-1.png" style="max-width: 270px; max-height: 250px;">
+    </div>
+    <div class="column-4">
+        <img src="./img/buy-now/shipping-tra-1.png" style="max-width: 270px; max-height: 250px;">
+    </div>
+</div>
+
+        <div>
+            <img src="./img/Lash-Finder-Holiday-Desktop-2000x400.jpg" style="max-width:1200px;max-height:720px; margin-top: 30px">
+        </div>
+
+        <p class="center" style="font-family: serif; font-size: 20px">SHOP YOUR FAVORITE LASHES<br></p>
+<div class="row center">
+    <div class="column-4">
+        <img src="./img/shop-your-favorite-lashes/1-Cashmere-favoriteoweb_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+        <p class="center" style="font-size: 14px">FAVORITE - Cashmere FauxMink Mega Volume Lashes 0.02mm</p>
+        <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
+    <div class="column-4">
+        <img src="./img/shop-your-favorite-lashes/1-Cashmere-favoriteoweb_3260954b-6aa9-402c-874d-1caba91444a8_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+        <p class="center" style="font-size: 14px">FAVORITE - Cashmere FauxMink Mega Volume Lashes 0.03mm</p>
+        <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
+    <div class="column-4">
+        <img src="./img/shop-your-favorite-lashes/Cashmre-Feather--Angles_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+        <p class="center" style="font-size: 14px">FAVORITE - Cashmere FauxMink Lashes 0.05mm</p>
+        <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
+    <div class="column-4">
+        <img src="./img/shop-your-favorite-lashes/Royal-Sable-Favorite-New-Lashes-Master-Web_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+        <p class="center" style="font-size: 14px">FAVORITE - Royal Sable Lashes 0.03mm</p>
+        <p class="center" style="font-size: 13px">$17.90</p>
+    </div>
+</div>
+
+        <div>
+            <img src="./img/lbla-lashes-desktop.jpg" style="max-width:1200px;max-height:720px; margin-top: 30px">
+        </div>
+        <div>
+            <img src="./img/Adhesive-Finder-Holiday-Desktop-2000x400.jpg" style="max-width:1200px;max-height:720px; margin-top: 30px">
+        </div>
+
+        <p class="center" style="font-family: serif; font-size: 20px">BEST-SELLING ADHESIVES<br></p>
+
+        <div class="row center">
+            <div class="column-4">
+                <img src="./img/best-selling-adhesives/2020-Duo-Kit_-Superhero_Everlasring_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+                <p class="center" style="font-size: 14px">Duo Adhesive Kit (Superhero and Everlasting 5ml) - Lash Extension Adhesive / Lash Glue</p>
+                <p class="center" style="font-size: 13px">$17.90</p>
+            </div>
+            <div class="column-4">
+                <img src="./img/best-selling-adhesives/Camo-5ml-Web-NEW_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+                <p class="center" style="font-size: 14px">OMega - Fast Lash Extension Adhesive / Lash Glue</p>
+                <p class="center" style="font-size: 13px">$17.90</p>
+            </div>
+            <div class="column-4">
+                <img src="./img/best-selling-adhesives/Invisible-Genius-Web-Images_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+                <p class="center" style="font-size: 14px">Camo - Fast Lash Extension Adhesive / Lash Glue</p>
+                <p class="center" style="font-size: 13px">$17.90</p>
+            </div>
+            <div class="column-4">
+                <img src="./img/best-selling-adhesives/LashboxWeb7616_HR_a3bba53c-0cc8-4198-8539-60be9849edc9_1024x1024.webp" style="max-width: 270px; max-height: 250px;">
+                <p class="center" style="font-size: 14px">Invisible Genius - Lash Extension Adhesive / Lash Glue</p>
+                <p class="center" style="font-size: 13px">$17.90</p>
+            </div>
+        </div>
+
+        <div>
+            <img src="./img/Aftercare-Holiday-Desktop-Banners-2000px-x-800px.jpg" style="max-width:1200px;max-height:720px; margin-top: 30px">
+        </div>
+
+        <p class="center" style="font-family: serif; font-size: 20px">AFTERCARE MUST-HAVES<br></p>
+        <div class="row center">
+            <div class="column-3">
+                <img src="./img/aftercare-must-haves/Be-Naked-Cleansing-Foam-Web_1024x1024.webp" style="max-width: 350px; max-height: 350px;">
+                <p class="center" style="font-size: 14px">Duo Adhesive Kit (Superhero and Everlasting 5ml) - Lash Extension Adhesive / Lash Glue</p>
+                <p class="center" style="font-size: 13px">$17.90</p>
+            </div>
+            <div class="column-3">
+                <img src="./img/aftercare-must-haves/LashboxWeb7555_RT_HR_1024x1024.webp" style="max-width: 350px; max-height: 350px;">
+                <p class="center" style="font-size: 14px">OMega - Fast Lash Extension Adhesive / Lash Glue</p>
+                <p class="center" style="font-size: 13px">$17.90</p>
+            </div>
+            <div class="column-3">
+                <img src="./img/aftercare-must-haves/Travel-Size-Bubble-Shampoo-Cap-On-Web-Images_1024x1024.webp" style="max-width: 350px; max-height: 350px;">
+                <p class="center" style="font-size: 14px">Camo - Fast Lash Extension Adhesive / Lash Glue</p>
+                <p class="center" style="font-size: 13px">$17.90</p>
+            </div>
+        </div>
+
+        <div>
+            <img src="./img/Retail-Sets-Holiday-Desktop-Banners-2000px-x-800px.jpg" style="max-width:1200px;max-height:720px; margin-top: 30px">
+        </div>
+
+        <div>
+            <img src="./img/Cosmetics-Holiday-Desktop-Banners-2000px-x-800px.jpg" style="max-width:1200px;max-height:720px; margin-top: 30px">
+        </div>
+
+        <p class="center" style="font-family: serif; font-size: 20px">STYLED ON INSTAGRAM<br></p>
+    </div>
+        <hr>
+
+
+
+
 <script>
     let slideIndex = 0;
     showSlides();
+
+    function plusSlides(n) {
+        showSlides_button(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides_button(slideIndex = n);
+    }
+
+    function showSlides_button(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
 
     function showSlides() {
         let i;
@@ -300,12 +547,23 @@
         }
         slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
         slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
         setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+
+    function displayCursorSlide() {
+        let cursors = document.querySelectorAll('.prev,.next');
+        for(let cursor of cursors) {
+            cursor.style.display = "block";
+            cursor.style.animationDelay = "10"
+        }
+    }
+
+    function hideCursorSlide() {
+        let cursors = document.querySelectorAll('.prev,.next');
+        for(let cursor of cursors) {
+            cursor.style.display = "none";
+        }
     }
 </script>
 
